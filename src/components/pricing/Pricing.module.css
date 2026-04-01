@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.cardList {
+    margin-top: 24px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    width: 100%;
+
+    & > li {
+        list-style: none;
+        flex: 1;
+    }
+}
+
+.card {
+    --bg: var(--clr-surface);
+    --border: var(--clr-border);
+    --text: var(--clr-text);
+    --text-muted: var(--clr-text-muted);
+    background: var(--bg);
+    color: var(--text);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+
+    &.cardHighlight {
+        --bg: var(--gradient-primary) border-box;
+        --border: transparent;
+        --text: var(--white);
+        --text-muted: var(--white);
+        position: relative;
+
+        & > span {
+            color: #bb4d00;
+            font-size: var(--fs-sm);
+            font-weight: var(--fw-md);
+            padding: 6px 12px;
+            background-color: #fef3c6;
+            border-radius: var(--radius-full);
+            position: absolute;
+            top: -4%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        & button {
+            font-size: var(--fs-base);
+            font-weight: var(--fw-b);
+            color: transparent;
+            padding: var(--space-3) var(--space-4);
+            background-color: var(--white);
+            border: unset;
+            
+            & span {
+                background: var(--gradient-primary) text;
+            }
+        }
+    }
+
+    & h3 {
+        font-size: var(--fs-2xl);
+        font-weight: var(--fw-b);
+        margin-bottom: 8px;
+    }
+
+    & p {
+        color: var(--text-muted);
+    }
+
+    & data {
+        font-size: var(--fs-3xl);
+        font-weight: var(--fw-b);
+
+        & span {
+            font-size: var(--fs-xl);
+            font-weight: var(--fw-n);
+            color: var(--text-muted);
+        }
+    }
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        flex: 1;
+    }
+
+    & li {
+        list-style-position: inside;
+        list-style-image: url('../../assets/check.svg');
+        font-weight: var(--fw-md);
+        color: var(--text-muted);
+    }
+}
+
+@media only screen and (width <= 28rem) {
+    .cardList {
+        flex-direction: column;
+    }
+}

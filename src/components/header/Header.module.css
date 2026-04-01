@@ -4,6 +4,7 @@ header {
     width: min(100%, 1200px);
     margin-inline: auto;
     padding: 16px;
+    position: relative;
 }
 
 nav {
@@ -69,3 +70,70 @@ nav {
     padding: unset;
 }
 
+.mainTrav {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    & svg {
+        display: none;
+        cursor: pointer;
+        overflow: visible;
+
+        & line {
+            transform-origin: center;
+            transform-box: fill-box;
+            transition: transform 300ms, stroke-width 300ms;
+        }
+
+        & .sLine {
+            transform-origin: 0px 0px;
+            transform: scaleX(1);
+        }
+    }
+
+    &[data-open="true"] svg {
+        & .fLine {
+            transform: translateY(10px) rotate(45deg);
+        }
+
+        & .sLine {
+            transform-origin: 0px 0px;
+            transform: scaleX(0);
+        }
+
+        & .tLine {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+    }
+}
+
+@media only screen and (width <= 56rem) {
+    .mainTrav svg {
+        display: block;
+    }
+
+    header .menu {
+        background-color: var(--white);
+        padding: 8px 16px;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: -90%;
+        transition: left 300ms;
+    }
+
+    header .menu[data-open="true"] {
+        left: 3%;
+    }
+}
+
+@media only screen and (width <= 28rem) {
+    .btnContainer {
+        gap: var(--space-2);
+
+        & >:last-child {
+            padding: 4px 6px;
+        }
+    }
+}

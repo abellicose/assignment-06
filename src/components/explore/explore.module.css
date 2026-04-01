@@ -1,0 +1,76 @@
+.section {
+    background: var(--gradient-primary);
+    color: var(--white);
+}
+
+.title {
+    color: var(--white);
+}
+
+.desc {
+    text-align: center;
+    max-width: 70ch;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+}
+
+.buttonContainer {
+    & div {
+        display: flex;
+        gap: 16px;
+    }
+
+    & button {
+        --text: var(--clr-primary);
+        --bg: var(--white);
+
+        background-color: var(--bg);
+        color: var(--text);
+        padding: 16px;
+        border-radius: var(--radius-full);
+        font-weight: var(--fw-sb);
+        border: 1px solid var(--white);
+    }
+
+    & button.btnInvert {
+        --text: var(--white);
+        --bg: transparent;
+        padding: 16px 35px;
+    }
+
+    & ul {
+        display: flex;
+        gap: 16px;
+
+        & li {
+            list-style-position: inside;
+
+            &:first-child {
+                list-style: none;
+            }
+        }
+    }
+}
+
+
+@media only screen and (width <= 28rem) {
+    .buttonContainer ul {
+        gap: 7px;
+    }
+
+    .buttonContainer li {
+        font-size: 14px;
+    }
+}

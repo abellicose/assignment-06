@@ -41,3 +41,17 @@
 
     }
 }
+
+@media only screen and (width <= 28rem) {
+    .section {
+        --section-padding: 30px;
+    }
+
+    .container ul li strong {
+        font-size: 2rem;
+    }
+
+    .container ul li span {
+        font-size: 1rem;
+    }
+}
