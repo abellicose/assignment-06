@@ -1,0 +1,62 @@
+[
+  {
+    "id": 0,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
+    "price": 29,
+    "billing": "monthly",
+    "badge": "Best Seller",
+    "features": ["Unlimited AI generations", "50+ writing templates", "Grammar checker"],
+    "image": "./products/writing.png"
+  },
+  {
+    "id": 1,
+    "name": "Design Templates Pack",
+    "description": "2000+ premium templates for social media, presentations, and marketing materials.",
+    "price": 49,
+    "billing": "one-time",
+    "badge": "Popular",
+    "features": ["2000+ templates", "Monthly updates", "Commercial license"],
+    "image": "./products/design-tool.png"
+  },
+  {
+    "id": 2,
+    "name": "Premium Stock Assets",
+    "description": "Access millions of royalty-free photos, videos, and graphics for your projects.",
+    "price": 19,
+    "billing": "monthly",
+    "badge": "New",
+    "features": ["10M+ assets", "Commercial use", "No attribution"],
+    "image": "./products/camera.svg"
+  },
+  {
+    "id": 3,
+    "name": "Automation Toolkit",
+    "description": "Automate repetitive tasks and streamline your workflow with powerful tools.",
+    "price": 79,
+    "billing": "monthly",
+    "badge": "Popular",
+    "features": ["50+ automations", "API access", "Custom workflows"],
+    "image": "./products/operation.png"
+  },
+  {
+    "id": 4,
+    "name": "Resume Builder Pro",
+    "description": "Create professional resumes and cover letters that land interviews.",
+    "price": 15,
+    "billing": "one-time",
+    "badge": "New",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "image": "./products/portfolio.png"
+  },
+  {
+    "id": 5,
+    "name": "Social Media Content Kit",
+    "description": "Complete toolkit for creating engaging social media content across all platforms.",
+    "price": 39,
+    "billing": "monthly",
+    "badge": "Best Seller",
+    "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"],
+    "image": "./products/social-media.png"
+  }
+]

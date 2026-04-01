@@ -15,7 +15,7 @@ function Card({product, onClickBuy, isInCart}) {
             <ul>
                 {features.map((feature, index) => <li key={index}>{feature}</li>)}
             </ul>
-            <button className="btn-primary" disabled={isInCart} onClick={onClickBuy}>{isInCart ? "Added" : "Buy Now"}</button>
+            <button className="btn-primary" disabled={isInCart} onClick={onClickBuy}>{isInCart ? "Added to Cart" : "Buy Now"}</button>
         </article>
     );
 }

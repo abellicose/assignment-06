@@ -2,9 +2,10 @@ import styles from "./Tools.module.css";
 import CartIcon from "../../assets/cart.svg";
 import { useState, use, Suspense } from 'react';
 import Card from "./Card.jsx";
+import {ToastContainer, toast} from 'react-toastify';
 
 async function getData() {
-    const response = await fetch("/products.json");
+    const response = await fetch("./products.json");
     return response.json();
 }
 
@@ -16,6 +17,7 @@ function ProductPanel({cart, setCart}) {
     function onClickBuy(id) {
         const filtered = [...cart, products.find(product => product.id === id)];
         setCart(filtered);
+        toast("Product Added to Cart");
     }
 
     return (
@@ -33,6 +35,7 @@ function CartList({cart, setCart}) {
     function handleRemove(id) {
         const filtered = cart.filter(product => product.id !== id);
         setCart(filtered);
+        toast("Product Removed From Cart");
     }
 
     return (
@@ -52,7 +55,7 @@ function CartList({cart, setCart}) {
                 )}
             </ul>
             <p>Total: <data value={total}>${total}</data></p>
-            <button className="btn-primary" onClick={() => setCart([])}>Proceed To Checkout</button>
+            <button className="btn-primary" onClick={() => { setCart([]); toast("Cart Cleared"); }}>Proceed To Checkout</button>
         </>
     );
 }
@@ -78,26 +81,28 @@ function Cart({cart, setCart}) {
 }
 
 function Tools({active, setActive, cart, setCart}) {
-
     return (
-        <section className="section" id="tools">
-            <div className={styles.content}>
-                <h2 className="section-title">Premium Digital tools</h2>
-                <p className="section-desc">Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
-                <div className={styles.btnContainer}>
-                    <button className={`${styles.btnTab} ${active == 0 && 'btn-primary'}`} aria-selected={active==0} onClick={() => setActive(0)}>Products</button>
-                    <button className={`${styles.btnTab} ${active == 1 && 'btn-primary'}`} aria-selected={active==1} onClick={() => setActive(1)}>Cart ({cart.length})</button>
+        <>
+            <ToastContainer />
+            <section className="section" id="tools">
+                <div className={styles.content}>
+                    <h2 className="section-title">Premium Digital tools</h2>
+                    <p className="section-desc">Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
+                    <div className={styles.btnContainer}>
+                        <button className={`${styles.btnTab} ${active == 0 && 'btn-primary'}`} aria-selected={active==0} onClick={() => setActive(0)}>Products</button>
+                        <button className={`${styles.btnTab} ${active == 1 && 'btn-primary'}`} aria-selected={active==1} onClick={() => setActive(1)}>Cart ({cart.length})</button>
+                    </div>
                 </div>
-            </div>
 
-            <div className={styles.panelContainer} data-active={active}>
-                <Suspense fallback={<p>Loading...</p>}>
-                    <ProductPanel cart={cart} setCart={setCart} />
-                </Suspense>
-                
-                <Cart cart={cart} setCart={setCart} />
-            </div>
-        </section>
+                <div className={styles.panelContainer} data-active={active}>
+                    <Suspense fallback={<p>Loading...</p>}>
+                        <ProductPanel cart={cart} setCart={setCart} />
+                    </Suspense>
+
+                    <Cart cart={cart} setCart={setCart} />
+                </div>
+            </section>
+        </>
     );
 }
 

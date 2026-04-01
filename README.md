@@ -1,1 +1,7 @@
-HI
+- Name of My Project: DigiTools
+- Description: A single page react application with a section that toggles between products and the current cart, updated automatically without reloading.
+- Technology: HTML5, CSS3, React
+- Features:
+    - Auto switches and scrolls to cart section when header cart icon is clicked
+    - Smooth transition between products list and cart page
+    - Animated hamburger icon in header for small devices
