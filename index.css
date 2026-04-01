@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --clr-primary: #4f39f6;
+    --clr-secondary: #9514fa;
+    --clr-text: #101727;
+    --clr-text-muted: #627382;
+    --clr-text-inactive: #25065d;
+    --clr-border: #f6f6f6;
+    --clr-background: var(--white);
+    --clr-surface: #f9fafc;
+
+    --gradient-primary: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
+    --gradient-primary-vertical: linear-gradient(to bottom, var(--clr-primary), var(--clr-secondary));
+
+    --font-sans: "Manrope", sans-serif;
+    --fs-sm: 0.875rem; 
+    --fs-base: 1rem;
+    --fs-lg: 1.125rem;
+    --fs-xl: 1.25rem;
+    --fs-2xl: 2.5rem;
+    --fs-3xl: 3rem;
+    --fs-4xl: 4.5rem;
+    --fw-n: 400;
+    --fw-md: 500;
+    --fw-sb: 600;
+    --fw-b: 700;
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-7: 1.75rem;
+    --space-8: 2rem;
+
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+    background: var(--white);
+    padding: var(--space-1) var(--space-4);
+    border: 1px solid black;
+    border-radius: var(--radius-full);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-sb);
+    color: var(--clr-text);
+    cursor: pointer;
+}
+
+.btn-primary {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-sb);
+    color: var(--white);
+    padding: var(--space-3) var(--space-4);
+    background-image: var(--gradient-primary);
+    border: unset;
+}

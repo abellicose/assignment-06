@@ -1,0 +1,55 @@
+/* Header.css */
+
+header {
+    width: min(100%, 1200px);
+    margin-inline: auto;
+    padding: 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 a {
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-b);
+    color: transparent;
+    background-image: var(--gradient-primary);
+    background-clip: text;
+}
+
+ul {
+    display: flex;
+    font-size: var(--fs-base);
+    gap: var(--space-8);
+
+    & li {
+        list-style: none;
+
+        & a {
+            color: var(--clr-text);
+            font-weight: var(--fw-sb);
+        }
+    }
+}
+
+.btnContainer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.btnCart {
+    background: unset;
+    padding: unset;
+    border: unset;
+}
+
+.btnLogin {
+    border: unset;
+    border-radius: unset;
+    padding: unset;
+}
+
