@@ -1,4 +1,7 @@
 import styles from "./footer.module.css";
+import FBLogo from "../../assets/fb-logo.svg";
+import IGLogo from "../../assets/ig-logo.svg";
+import TwitterLogo from "../../assets/twitter-logo.svg";
 
 function Footer() {
     return (
@@ -39,12 +42,12 @@ function Footer() {
                             <li>Contact</li>
                         </ul>
                     </div>
-                    <div>
+                    <div className={styles.social}>
                         <h3>Social Links</h3>
                         <ul>
-                            <li>Facebook</li>
-                            <li>YouTube</li>
-                            <li>Twitter/X</li>
+                            <li><img src={IGLogo} alt="" /></li>
+                            <li><img src={FBLogo} alt="" /></li>
+                            <li><img src={TwitterLogo} alt="" /></li>
                         </ul>
                     </div>
 

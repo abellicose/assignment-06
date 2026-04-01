@@ -45,6 +45,17 @@
     & li {
         list-style: none;
     }
+
+    & .social ul {
+        display: flex;
+        gap: 12px;
+        
+        & li img {
+            padding: 10px;
+            border-radius: var(--radius-full);
+            background-color: var(--white);
+        }
+    }
 }
 
 .footer hr {
@@ -60,7 +71,7 @@
 
     & ul {
         display: flex;
-        gap: 8px;
+        gap: 32px;
 
         & li {
             list-style: none;
@@ -90,9 +101,5 @@
     .copyright {
         flex-direction: column;
         gap: 16px;
-    }
-
-    .copyright ul {
-        gap: 32px;
     }
 }
