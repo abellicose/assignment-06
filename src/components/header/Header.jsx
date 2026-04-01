@@ -2,7 +2,7 @@ import styles from "./Header.module.css";
 import CartIcon from "../../assets/cart.svg";
 import { useState } from 'react';
 
-function Header({cartCount = 0})
+function Header({cartCount = 0, openCart})
 {
     const [hamb, setHamb] = useState(false);
     
@@ -25,9 +25,11 @@ function Header({cartCount = 0})
                     <li><a href="#fAQ">FAQ</a></li>
                 </ul>
                 <div className={styles.btnContainer}>
-                    <button className={styles.btnCart}>
-                        <img src={CartIcon} alt="Shopping Cart Icon" />
-                        <span>{cartCount}</span>
+                    <button className={styles.btnCart} onClick={openCart}>
+                        <a href="#tools">
+                            <img src={CartIcon} alt="Shopping Cart Icon" />
+                            <span>{cartCount}</span>
+                        </a>
                     </button>
                     <button className={styles.btnLogin}>Login</button>
                     <button className="btn-primary">Get Started</button>

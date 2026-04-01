@@ -16,7 +16,7 @@ function Banner() {
                     <p>Access premium AI tools, design assets, templates, and productivity software—all in one place. Start creating faster today. 
                     </p>
                     <div className={styles.btnContainer}>
-                        <button className="btn-primary">Explore Products</button>
+                        <button className="btn-primary"><a href="#tools">Explore Products</a></button>
                         <button className={styles.btnDemo}>
                             <img src={PlayIcon} alt="" />
                             <span>Watch Demo</span>

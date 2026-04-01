@@ -1,6 +1,6 @@
 import styles from "./Card.module.css";
 
-function Card({product}) {
+function Card({product, onClickBuy, isInCart}) {
     const {id, name, description: desc, price, billing, badge, features, image} = product;
     return (
         <article className={styles.card}>
@@ -13,9 +13,9 @@ function Card({product}) {
                 <span>/{billing === "monthly" ? "Mo" : "One-Time"}</span>
             </data>
             <ul>
-                {features.map(feature => <li>{feature}</li>)}
+                {features.map((feature, index) => <li key={index}>{feature}</li>)}
             </ul>
-            <button className="btn-primary">Buy Now</button>
+            <button className="btn-primary" disabled={isInCart} onClick={onClickBuy}>{isInCart ? "Added" : "Buy Now"}</button>
         </article>
     );
 }
