@@ -2,7 +2,7 @@
     --section-padding: 60px;
 
     & h1 {
-        font-size: var(--fs-4xl);
+        font-size: var(--fs-6xl);
         color: var(--clr-text);
         font-weight: var(--fw-eb);
         line-height: 1.17;
@@ -49,8 +49,8 @@
 
 .btnContainer {
     display: flex;
-    margin-top: 16px;
-    gap: 16px;
+    margin-top: var(--space-4);
+    gap: var(--space-4);
 }
 
 .btnDemo {

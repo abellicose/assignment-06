@@ -12,7 +12,7 @@ nav {
     align-items: center;
 
     & h2 a {
-        font-size: var(--fs-2xl);
+        font-size: var(--fs-3xl);
         font-weight: var(--fw-b);
         color: transparent;
         background-image: var(--gradient-primary);
