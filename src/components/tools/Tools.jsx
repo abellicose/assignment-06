@@ -80,6 +80,16 @@ function Cart({cart, setCart}) {
     );
 }
 
+function Loading() {
+    return (
+        <div className={styles.panel}>
+            <div className={styles.cartContent}>
+                <h2>Loading products...</h2>
+            </div>
+        </div>
+            );
+}
+
 function Tools({active, setActive, cart, setCart}) {
     return (
         <>
@@ -95,7 +105,7 @@ function Tools({active, setActive, cart, setCart}) {
                 </div>
 
                 <div className={styles.panelContainer} data-active={active}>
-                    <Suspense fallback={<p>Loading...</p>}>
+                    <Suspense fallback={<Loading />}>
                         <ProductPanel cart={cart} setCart={setCart} />
                     </Suspense>
 
