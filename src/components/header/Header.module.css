@@ -10,31 +10,31 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
-h2 a {
-    font-size: var(--fs-2xl);
-    font-weight: var(--fw-b);
-    color: transparent;
-    background-image: var(--gradient-primary);
-    background-clip: text;
-}
+    & h2 a {
+        font-size: var(--fs-2xl);
+        font-weight: var(--fw-b);
+        color: transparent;
+        background-image: var(--gradient-primary);
+        background-clip: text;
+    }
 
-ul {
-    display: flex;
-    font-size: var(--fs-base);
-    gap: var(--space-8);
+    & ul {
+        display: flex;
+        font-size: var(--fs-base);
+        gap: var(--space-8);
 
-    & li {
-        list-style: none;
+        & li {
+            list-style: none;
 
-        & a {
-            color: var(--clr-text);
-            font-weight: var(--fw-sb);
+            & a {
+                color: var(--clr-text);
+                font-weight: var(--fw-sb);
+            }
         }
     }
-}
 
+}
 .btnContainer {
     display: flex;
     align-items: center;
@@ -45,6 +45,22 @@ ul {
     background: unset;
     padding: unset;
     border: unset;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: var(--space-4);
+
+    & span {
+        --offset: calc(-1 * var(--space-4));
+
+        background-color: var(--clr-secondary);
+        color: var(--white);
+        border-radius: var(--radius-full);
+        padding-inline: var(--space-1);
+        position: absolute;
+        top: var(--offset);
+        right: var(--offset);
+    }
 }
 
 .btnLogin {

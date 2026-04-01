@@ -2,7 +2,7 @@ import styles from "./Header.module.css";
 import CartIcon from "../../assets/cart.svg";
 
 
-function Header({})
+function Header({cartCount = 0})
 {
     return (
         <header>
@@ -16,7 +16,10 @@ function Header({})
                     <li><a href="#fAQ">FAQ</a></li>
                 </ul>
                 <div className={styles.btnContainer}>
-                    <button className={styles.btnCart}><img src={CartIcon} alt="Shopping Cart Icon" /></button>
+                    <button className={styles.btnCart}>
+                        <img src={CartIcon} alt="Shopping Cart Icon" />
+                        <span>{cartCount}</span>
+                    </button>
                     <button className={styles.btnLogin}>Login</button>
                     <button className="btn-primary">Get Started</button>
                 </div>

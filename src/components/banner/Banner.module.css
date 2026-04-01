@@ -1,0 +1,66 @@
+.section {
+    --section-padding: 60px;
+
+    & h1 {
+        font-size: var(--fs-4xl);
+        color: var(--clr-text);
+        font-weight: var(--fw-eb);
+        line-height: 1.17;
+    }
+
+    & p {
+        font-size: var(--fs-lg);
+        color: var(--clr-text-muted);
+        line-height: 1.6;
+        font-weight: var(--fw-n);
+
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--space-4);
+}
+
+.announcement {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    background-color: var(--clr-surface-accent);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-md);
+
+    & span {
+        color: transparent;
+        background-image: var(--gradient-primary);
+        background-clip: text;
+    }
+}
+
+.btnContainer {
+    display: flex;
+    margin-top: 16px;
+    gap: 16px;
+}
+
+.btnDemo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-color: transparent;
+    background: linear-gradient(var(--white), var(--white)) padding-box, var(--gradient-primary) border-box;
+    & span {
+        color: transparent;
+        background: var(--gradient-primary) text;
+    }
+}

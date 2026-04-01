@@ -12,6 +12,7 @@
     --clr-border: #f6f6f6;
     --clr-background: var(--white);
     --clr-surface: #f9fafc;
+    --clr-surface-accent: #e1e7ff;
 
     --gradient-primary: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
     --gradient-primary-vertical: linear-gradient(to bottom, var(--clr-primary), var(--clr-secondary));
@@ -28,6 +29,7 @@
     --fw-md: 500;
     --fw-sb: 600;
     --fw-b: 700;
+    --fw-eb: 800;
 
     --space-1: 0.25rem;
     --space-2: 0.5rem;
@@ -64,16 +66,29 @@ button {
     border: 1px solid black;
     border-radius: var(--radius-full);
     font-size: var(--fs-base);
-    font-weight: var(--fw-sb);
+    font-weight: var(--fw-b);
     color: var(--clr-text);
     cursor: pointer;
 }
 
 .btn-primary {
     font-size: var(--fs-base);
-    font-weight: var(--fw-sb);
+    font-weight: var(--fw-b);
     color: var(--white);
     padding: var(--space-3) var(--space-4);
     background-image: var(--gradient-primary);
     border: unset;
+}
+
+/* Section */
+
+.section {
+    padding-block: var(--section-padding, 120px);
+    display: flex;
+    place-items: center;
+
+    & .container {
+        width: min(100%, 1200px);
+        margin-inline: auto;
+    }
 }
